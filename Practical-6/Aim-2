@@ -1,0 +1,26 @@
+#include <stdio.h>
+// Aayush Mitra 10025
+
+int main() {
+    int n, sum = 0;
+
+    printf("Enter the limit: ");
+    scanf("%d", &n);
+
+    for (int i = 1; i <= n; i++) {
+        if (i % 2 != 0)
+            continue; // Skip odd numbers
+        sum += i;
+        // Add only even numbers
+    }
+    
+    printf("Sum of even numbers = %d\n", sum);
+
+    return 0;
+}
+
+// Enter the limit: 7
+// Sum of even numbers = 12
+
+
+// === Code Execution Successful ===
