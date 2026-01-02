@@ -1,0 +1,43 @@
+#include <stdio.h>
+// Aayush Mitra 10025
+
+int main(){
+    int correctPIN = 1234;
+    int pin;
+    int attempts = 3;
+
+    while (attempts > 0) {
+        printf("Enter ATM PIN: ");
+        scanf("%d", &pin);
+
+        if (pin == correctPIN) {
+            printf("Access Granted!\n");
+            return 0;
+        } else {
+            attempts--;
+            printf("Wrong PIN! Attempts left: %d\n", attempts);
+        }
+    }
+
+    printf("Card Blocked! Too many wrong attempts.\n");
+    return 0;
+}
+
+// Output-1
+// Enter ATM PIN: 547 
+// Wrong PIN! Attempts left: 2
+// Enter ATM PIN: 8695
+// Wrong PIN! Attempts left: 1
+// Enter ATM PIN: 4125
+// Wrong PIN! Attempts left: 0
+// Card Blocked! Too many wrong attempts.
+
+
+// === Code Execution Successful ===
+
+// Output-2
+// Enter ATM PIN: 1234
+// Access Granted!
+
+
+// === Code Execution Successful ===
